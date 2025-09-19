@@ -13,6 +13,8 @@ def move_top():
 
 def move_right():
     print('Moving right')
+    for y in range(550, 50, -5):
+        draw_boy(750, y)
     pass
 
 
