@@ -40,6 +40,24 @@ def move_rectangle():
     move_left()
     pass
 
+def move_triangle():
+    print("Move Triangle")
+    for i in range(100):
+        x = 400 + (i / 100) * 0
+        y = 100 + (i / 100) * 400
+        draw_boy(x, y)
+
+    for i in range(100):
+        x = 400 + (i / 100) * 300
+        y = 500 + (i / 100) * (-300)
+        draw_boy(x, y)
+
+    for i in range(100):
+        x = 700 + (i / 100) * (-300)
+        y = 200 + (i / 100) * (-100)
+        draw_boy(x, y)
+    pass
+
 def move_circle():
     print("Move Circle")
     r = 200
@@ -53,12 +71,13 @@ def move_circle():
 def draw_boy(x: float, y: float):
     clear_canvas_now()
     boy.draw_now(x, y)
-    delay(0.1)
+    delay(0.01)
 
 
 while True:
     # move_circle()
-    move_rectangle()
+    move_triangle()
+    # move_rectangle()
     # break
     pass
 
